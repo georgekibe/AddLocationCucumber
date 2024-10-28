@@ -11,16 +11,20 @@ import java.util.Properties;
 
 public class Utils {
 
-
+    public static RequestSpecification requestSpecification;
     public RequestSpecification requestSpecification() throws IOException {
 
-        PrintStream printStream = new PrintStream( new FileOutputStream("log.txt"));
+        if (requestSpecification  == null) {
+            PrintStream printStream = new PrintStream(new FileOutputStream("log.txt"));
 
-        RequestSpecification requestSpecification = new RequestSpecBuilder().addQueryParam("key","qaclick123").
-                setBaseUri(getGlobalValues("baseUrl")).
-                addFilter(RequestLoggingFilter.logRequestTo(printStream)). //logging externally
-                addFilter(ResponseLoggingFilter.logResponseTo(printStream)).
-                setContentType( ContentType.JSON).build();
+             requestSpecification = new RequestSpecBuilder().addQueryParam("key", "qaclick123").
+                    setBaseUri(getGlobalValues("baseUrl")).
+                    addFilter(RequestLoggingFilter.logRequestTo(printStream)). //logging externally
+                            addFilter(ResponseLoggingFilter.logResponseTo(printStream)).
+                    setContentType(ContentType.JSON).build();
+
+            return requestSpecification;
+        }
 
         return requestSpecification;
 

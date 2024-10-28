@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f36d083-765c-44fc-9247-2b67e8268387" name="Changes" comment="Made the code better neat, added external logging">
-      <change afterPath="$PROJECT_DIR$/src/test/java/resources/global.properties" afterDir="false" />
+    <list default="true" id="2f36d083-765c-44fc-9247-2b67e8268387" name="Changes" comment="global declaration of data">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/placeValidation.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/placeValidation.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/resources/TestDataBuild.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/TestDataBuild.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/resources/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefination/StepDefination.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefination/StepDefination.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730091298615</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="global declaration of data">
+      <option name="closed" value="true" />
+      <created>1730093839536</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1730093839536</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -182,6 +186,7 @@
     <MESSAGE value="Added dependecies" />
     <MESSAGE value="BDD done" />
     <MESSAGE value="Made the code better neat, added external logging" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made the code better neat, added external logging" />
+    <MESSAGE value="global declaration of data" />
+    <option name="LAST_COMMIT_MESSAGE" value="global declaration of data" />
   </component>
 </project>
