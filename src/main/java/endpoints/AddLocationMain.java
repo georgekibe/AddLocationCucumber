@@ -1,6 +1,9 @@
 package endpoints;
 
 
+import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.specification.RequestSpecification;
+import io.restassured.specification.ResponseSpecification;
 import org.testng.annotations.Test;
 import pojo.serialization.Location;
 import pojo.serialization.LocationDetails;
@@ -49,6 +52,14 @@ public class AddLocationMain {
                 .when().post("https://rahulshettyacademy.com/maps/api/place/add/json")
                 .then().assertThat().statusCode(200).extract().asString();
         System.out.println("The Response: " + addLocationResponse);
+
+
+        // below using spec builder
+
+        RequestSpecification requestSpecification = given().log().all().queryParam("key", "qaclick123")
+                .body(locationDetails);
+        ResponseSpecification  responseSpecification = (ResponseSpecification) (ResponseSpecification) requestSpecification.when().post("https://rahulshettyacademy.com/maps/api/place/add/json")
+                .then().assertThat().statusCode(200).extract().response();
 
     }
 
