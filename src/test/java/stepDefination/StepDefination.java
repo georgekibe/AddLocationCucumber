@@ -10,7 +10,10 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import pojo.serialization.Location;
 import pojo.serialization.LocationDetails;
+import resources.TestDataBuild;
+import resources.Utils;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,39 +21,18 @@ import static io.restassured.RestAssured.given;
 
 import static org.junit.Assert.*;
 
-public class StepDefination {
+public class StepDefination extends Utils {
 
     RequestSpecification request;
     Response response;
 
     @Given("Add Place Payload")
-    public void add_place_payload() {
-        // Write code here that turns the phrase above into concrete actions
-        // initialize the payload parameters using the pojo serialization
-        LocationDetails locationDetails = new LocationDetails();
+    public void add_place_payload() throws FileNotFoundException {
 
-        Location location = new Location();
-        location.setLat(-31.48488);
-        location.setLng(75.51515);
-        locationDetails.setLocation(location);
+        TestDataBuild testDataBuild = new TestDataBuild();
 
-        locationDetails.setAccuracy(50);
-        locationDetails.setName("Nairobi Kenya");
-        locationDetails.setPhone_number("+254728852318");
-        locationDetails.setAddress("Parklands, Nairobi");
-        locationDetails.setWebsite("https://google.com");
-        locationDetails.setLanguage("Kiswahili");
 
-        List types = new ArrayList();
-        types.add("shoe park");
-        types.add("shop");
-        locationDetails.setTypes(types);
-
-        RequestSpecification requestSpecification = new RequestSpecBuilder().addQueryParam("key","qaclick123").
-                setBaseUri("https://rahulshettyacademy.com").
-                setContentType( ContentType.JSON).build();
-
-         request = given().log(). all().spec(requestSpecification).body(locationDetails);
+         request = given().spec(requestSpecification()).body(testDataBuild.addPlacePayload());
 
 
     }
