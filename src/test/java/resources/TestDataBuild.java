@@ -8,7 +8,7 @@ import java.util.List;
 
 public class TestDataBuild {
 
-    public LocationDetails addPlacePayload(){
+    public LocationDetails addPlacePayload(String name, String langugage, String address){
         LocationDetails locationDetails = new LocationDetails();
 
         Location location = new Location();
@@ -18,11 +18,11 @@ public class TestDataBuild {
         locationDetails.setLocation(location);
 
         locationDetails.setAccuracy(50);
-        locationDetails.setName("Nairobi Kenya");
+        locationDetails.setName(name);
         locationDetails.setPhone_number("+254728852318");
-        locationDetails.setAddress("Parklands, Nairobi");
+        locationDetails.setAddress(address);
         locationDetails.setWebsite("https://google.com");
-        locationDetails.setLanguage("Kiswahili");
+        locationDetails.setLanguage(langugage);
 
         List types = new ArrayList();
         types.add("shoe park");

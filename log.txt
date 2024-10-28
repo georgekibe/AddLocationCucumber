@@ -16,9 +16,9 @@ Body:
         "lng": 75.51515
     },
     "accuracy": 50,
-    "name": "Nairobi Kenya",
+    "name": "Manti",
     "phone_number": "+254728852318",
-    "address": "Parklands, Nairobi",
+    "address": "Karura Forest Lane",
     "types": [
         "shoe park",
         "shop"
@@ -27,7 +27,7 @@ Body:
     "language": "Kiswahili"
 }
 HTTP/1.1 200 OK
-Date: Mon, 28 Oct 2024 04:53:44 GMT
+Date: Mon, 28 Oct 2024 05:34:31 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
@@ -40,8 +40,8 @@ Content-Type: application/json;charset=UTF-8
 
 {
     "status": "OK",
-    "place_id": "95eefa0e8b678821de8c1e8353e35096",
+    "place_id": "2a9cc219c45381c11a6b779ee11bbc61",
     "scope": "APP",
-    "reference": "73da54846889260502afaa43de65176973da54846889260502afaa43de651769",
-    "id": "73da54846889260502afaa43de651769"
+    "reference": "f916c4aa530afcf2405ba4bf61312c78f916c4aa530afcf2405ba4bf61312c78",
+    "id": "f916c4aa530afcf2405ba4bf61312c78"
 }
